@@ -5,7 +5,7 @@ import { useToDoStore } from "../../zustand/toDo/toDo";
 
 const Container = styled.div`
   width: 100%;
-  height: 100%;
+  height: 100px;
 `;
 
 export const Button = styled.button`
@@ -26,8 +26,6 @@ const Input: React.FunctionComponent = () => {
     []
   );
 
-  console.log(toDo);
-
   const handleAdd = useCallback(() => {
     addToDo(value);
   }, [addToDo, value]);
@@ -35,7 +33,7 @@ const Input: React.FunctionComponent = () => {
   return (
     <Container>
       <input type="text" value={value} onChange={handleChange} />
-      <Button onChange={handleAdd}>Add</Button>
+      <Button onClick={handleAdd}>Add</Button>
     </Container>
   );
 };

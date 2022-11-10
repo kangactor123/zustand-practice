@@ -2,10 +2,12 @@ import React from "react";
 import styled from "styled-components";
 import Counter from "../../component/Counter/Counter";
 import Input from "../../component/Input/Input";
+import ToDoList from "../../component/List/ToDoList";
+import SearchBar from "../../component/Search/SearchBar";
 
 const Layout = styled.div`
-  width: 100vw;
-  height: 100vh;
+  width: 100%;
+  height: 100%;
 `;
 
 const ListWrapper = styled.div`
@@ -19,8 +21,9 @@ const ToDo: React.FunctionComponent = () => {
   return (
     <Layout>
       <ListWrapper>
-        {/* <Input /> */}
-        <Counter />
+        <Input />
+        <ToDoList />
+        <SearchBar />
       </ListWrapper>
     </Layout>
   );

@@ -20,13 +20,14 @@ const Counter: React.FunctionComponent = () => {
   );
 
   const handleAdd = useCallback(() => {
+    console.log("click");
     increase(value);
   }, [increase, value]);
 
   return (
     <Wrapper>
       <input type="number" value={value} onChange={handleChange} />
-      <Button onChange={handleAdd}>increase</Button>
+      <Button onClick={handleAdd}>increase</Button>
       <span>My Count: {count}</span>
     </Wrapper>
   );
